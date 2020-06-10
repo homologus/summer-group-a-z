@@ -1,1 +1,0 @@
-# summer-group-a-z
