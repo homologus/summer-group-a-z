@@ -1,4 +1,6 @@
-f = open("ECOLI_Genome.txt", "r")
-x = (f.readlines())
-print(x)
-
+f = open("ECOLI_Genome.txt", "r") 
+x = f.readline()
+while x:
+    print(x)
+    x = f.readline()
+f.close()
