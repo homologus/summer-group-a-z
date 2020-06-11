@@ -1,3 +1,6 @@
 f = open("EcoliGenome.txt" , "r")
 print(f.read())
+g = open("gffForEcoli.txt", "r")
+print.g.readline(10)
 f.close()
+g.close()
