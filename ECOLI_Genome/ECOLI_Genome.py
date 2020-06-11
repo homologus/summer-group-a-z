@@ -1,2 +1,4 @@
 f = open("ECOLI_Genome.txt", "r")
-print(f.readlines())
+x = (f.readlines())
+print(x)
+
