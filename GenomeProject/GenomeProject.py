@@ -1,15 +1,15 @@
 f  = open("EcoliGenome.txt" , "r")
 x = f.read()
-WhatINeed = x[191:258] 
+WhatINeed = x[191:257] 
 WhatINeed = WhatINeed.rstrip("\n")
 WhatINeed.replace("\n", "")
-print(WhatINeed)
+WhatINeed.replace(" ", "")
 i = 0
 Amino = ""
-while i <= int( len(WhatINeed)):
+print(WhatINeed)
+print(len(WhatINeed))
+while i < int(len(WhatINeed)):
 	AminoLoop = WhatINeed[i:i+3]
-	print(AminoLoop)
-	print(AminoLoop[0: 2])
 	if AminoLoop[0: 2] ==  "GC":
 		Amino = Amino + 'A'
 	elif AminoLoop[0: 2] ==  "CT":
@@ -58,7 +58,7 @@ while i <= int( len(WhatINeed)):
 		Amino = Amino + 'W'
 	else:
 		Amino = Amino + '*'
-	i+=3
+	i= i + 3
 
 print("\n")
 print(Amino)
