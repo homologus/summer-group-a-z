@@ -1,6 +1,7 @@
 f = open("ECOLI_Genome.txt", "r")
 string = f.read()
 short_string = string[191:256]
+l = len(short_string)
 transation = {
 	"TTT": "F",
 	"TTC": "F",
@@ -64,5 +65,5 @@ transation = {
 	"GGA": "G",
 	"GGG": "G"	
 }
-
+print(short_string[translation])
 f.close()
