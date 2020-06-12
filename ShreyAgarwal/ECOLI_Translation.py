@@ -1,8 +1,8 @@
 f = open("ECOLI_Genome.txt", "r")
-string = f.read()
+string = f.readline()
 short_string = string[191:256]
 l = len(short_string)
-transation = {
+translation = {
 	"TTT": "F",
 	"TTC": "F",
 	"TTA": "L",
@@ -65,5 +65,12 @@ transation = {
 	"GGA": "G",
 	"GGG": "G"	
 }
-print(short_string[translation])
+
+x=0
+
+while(x < 1000):
+        y = string[x:x + 3]
+        print(translation[y],)
+        x = x + 3
+
 f.close()
