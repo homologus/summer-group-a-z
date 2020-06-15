@@ -1,6 +1,6 @@
 f = open("ECOLI_Genome.txt", "r")
 string = f.readlines()
-string = [item.rstrip() for item in string]
+string = [element.rstrip() for element in string]
 DNA = ""
 DNA = DNA.join(string)
 DNA_Short_String = DNA[189:254]
