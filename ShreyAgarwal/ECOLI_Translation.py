@@ -70,14 +70,13 @@ translation = {
 	"TGA": "O",
 	"TAA": "O",
 	"TAG": "A",
-	"C": "Done",
-	"U00096.3 Escherichia coli str. K-12 substr. MG1655, complete genome" : ""
+	"C": "Done"
 }
 
 x = 0
 
 while(x < length):
-        y = str(DNA[x:x + 2])
+        y = str(DNA_Short_String[x:x + 2])
         print(translation[y], )
         x = x + 3
 print(DNA_Short_String)
