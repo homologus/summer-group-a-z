@@ -1,7 +1,0 @@
-f  = open("EcoliGenome.txt" , "r")
-x = f.read()
-WhatINeed = x[191:257] 
-WhatINeed = WhatINeed.rstrip("\n")
-print(WhatINeed)
-for x in range(0, WhatINeed.size
-f.close()
