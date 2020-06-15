@@ -7,7 +7,6 @@ WhatINeed = s[190:257]
 i = 0
 Amino = ""
 print(WhatINeed)
-print(len(WhatINeed))
 while i < int(len(WhatINeed)):
 	AminoLoop = WhatINeed[i:i+3]
 	if AminoLoop[0: 2] ==  "GC":
@@ -59,7 +58,6 @@ while i < int(len(WhatINeed)):
 	else:
 		Amino = Amino + '*'
 	i= i + 3
-	print(Amino)
 	print("\n")
 print("\n")
 print(Amino)
