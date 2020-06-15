@@ -1,7 +1,10 @@
 f = open("ECOLI_Genome.txt", "r")
-string = f.readline()
-short_string = string[191:256]
-l = len(short_string)
+string = f.readlines()
+string = [element.rstrip() for element in string]
+DNA = ""
+DNA = DNA.join(string)
+DNA_Short_String = DNA[189:254]
+length = int(len(DNA))
 translation = {
 	"TTT": "F",
 	"TTC": "F",
@@ -63,14 +66,18 @@ translation = {
 	"GGT": "G",
 	"GGC": "G",
 	"GGA": "G",
-	"GGG": "G"	
+	"GGG": "G", 
+	"TGA": "O",
+	"TAA": "O",
+	"TAG": "A",
+	"C": "Done"
 }
 
 x = 0
 
-while(x < 1000):
-        y = string[x:x + 3]
-        print(translation[y])
+while(x < length):
+        y = str(DNA_Short_String[x:x + 2])
+        print(translation[y], )
         x = x + 3
-
-f.close()
+print(DNA_Short_String)
+f.close()       
