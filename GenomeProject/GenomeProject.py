@@ -3,62 +3,27 @@ x = f.readlines()
 x = [item.rstrip() for item in x]
 s = ""
 s = s.join(x)
-WhatINeed = s[190:257]
+WhatINeed = s[190:256]
 i = 0
 Amino = ""
 print(WhatINeed)
+
+WithTwoUnits = {"GC" : "A", "CT" : "L", "GG": "G", "CG" : "R", "AC": "T", "CC" :
+"P", "TC" : "S", "GT" : "V", "AT": "I"}
+#run WithAllThreeUnits first
+WithAllThreeUnits = {
+"ATG": "M", "TTT": "F",  "TTC": "F", "TTA": "L", "TTG": "L", "AGT": "S",  "AGC": "S",
+"AGA": "R",  "AGG": "R",  "GAA": "E",  "GAG" : "E", "GAT": "D",  "GAC": "D", "AAA": "K", 
+"AAG" : "K", "AAT":"N", "AAC": "N", "CAG": "Q", "CAA": "Q", "CAC": "H",  "CAT": "H", 
+"TAT": "Y", "TAC": "Y", "TGT": "C", "TGC": "C", "TGG": "W",
+ "TAA": "*",  "TAG": "*", "TGA": "*" 
+}
+
 while i < int(len(WhatINeed)):
-	AminoLoop = WhatINeed[i:i+3]
-	if AminoLoop[0: 2] ==  "GC":
-		Amino = Amino + 'A'
-	elif AminoLoop[0: 2] ==  "CT":
-		Amino = Amino + 'L'
-	elif AminoLoop[0: 2] == "GG":
-		Amino = Amino + 'G'
-	elif AminoLoop[0: 2] == "CG":
-		Amino = Amino + 'R'
-	elif AminoLoop[0: 2] == "AC":
-		Amino = Amino + 'T'
-	elif AminoLoop[0: 2] == "CC":
-		Amino = Amino + 'P'
-	elif AminoLoop[0: 2] == "TC":
-		Amino = Amino + 'S'
-	elif AminoLoop[0: 2] == "GT":
-		Amino = Amino + 'V'
-	elif AminoLoop == "ATG":
-		Amino = Amino + 'M'
-	elif AminoLoop[0: 2] == "AT":
-		Amino = Amino + 'I'
-	elif AminoLoop == "TTT" or AminoLoop  == "TTC":
-		Amino = Amino + 'F'
-	elif AminoLoop == "TTA" or AminoLoop == "TTG":
-		Amino = Amino + 'L'
-	elif AminoLoop == "AGT" or AminoLoop == "AGC":
-		Amino = Amino + 'S'
-	elif AminoLoop == "AGA" or AminoLoop == "AGG":
-		Amino = Amino + 'R'
-	elif AminoLoop == "GAA" or AminoLoop == "GAG":
-		Amino = Amino + 'E'
-	elif AminoLoop == "GAT" or AminoLoop == "GAC":
-		Amino = Amino + 'D'
-	elif AminoLoop == "AAA" or AminoLoop == "AAG":
-		Amino = Amino + 'K'
-	elif AminoLoop == "AAT" or AminoLoop == "AAC":
-		Amino = Amino + 'N'
-	elif AminoLoop == "CAG" or AminoLoop == "CAA":
-		Amino = Amino + "Q"
-	elif AminoLoop == "CAC" or AminoLoop == "CAT":
-		Amino = Amino + 'H'
-	elif AminoLoop == "TAT" or AminoLoop == "TAC":
-		Amino = Amino + 'Y'
-	elif AminoLoop == "TGT" or AminoLoop == "TGC":
-		Amino = Amino + 'C'
-	elif AminoLoop == "TGG":
-		Amino = Amino + 'W'
-	else:
-		Amino = Amino + '*'
-	i= i + 3
-	print("\n")
-print("\n")
-print(Amino)
+	try:
+		Amino += WithAllThreeUnits[WhatINeed[i:i+3]]
+	except KeyError:
+		Amino += WithTwoUnits[WhatINeed[i: i+2]]
+	i+=3
+print (Amino)
 f.close()
