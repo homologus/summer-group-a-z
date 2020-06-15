@@ -66,7 +66,12 @@ translation = {
 	"GGT": "G",
 	"GGC": "G",
 	"GGA": "G",
-	"GGG": "G"	
+	"GGG": "G", 
+	"TGA": "O",
+	"TAA": "O",
+	"TAG": "A",
+	"C": "Done",
+	"U00096.3 Escherichia coli str. K-12 substr. MG1655, complete genome" : ""
 }
 
 x = 0
