@@ -67,17 +67,20 @@ translation = {
 	"GGC": "G",
 	"GGA": "G",
 	"GGG": "G", 
-	"TGA": "O",
-	"TAA": "O",
-	"TAG": "A",
-	"C": "Done"
+	"TGA": "Stop Codon",
+	"TAA": "Stop Codon",
+	"TAG": "Stop Codon",
+	"C": "Done",
+	"TG": "Done",
+	"CA": "Done"
 }
 
 x = 0
+Protein_Sequence = ""
 
 while(x < length):
-        y = str(DNA_Short_String[x:x + 2])
+        y = str(DNA_Short_String[x:x + 3])
         print(translation[y], )
         x = x + 3
 print(DNA_Short_String)
-f.close()       
+f.close()
