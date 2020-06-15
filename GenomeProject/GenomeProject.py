@@ -1,9 +1,10 @@
 f  = open("EcoliGenome.txt" , "r")
+a = f.readline()
 x = f.readlines()
 x = [item.rstrip() for item in x]
 s = ""
 s = s.join(x)
-WhatINeed = s[190:256]
+WhatINeed = s[189:255]
 i = 0
 Amino = ""
 print(WhatINeed)
