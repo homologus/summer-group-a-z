@@ -1,9 +1,9 @@
 f  = open("EcoliGenome.txt" , "r")
-x = f.read()
-WhatINeed = x[191:257] 
-WhatINeed = WhatINeed.rstrip("\n")
-WhatINeed.replace("\n", "")
-WhatINeed.replace(" ", "")
+x = f.readlines()
+x = [item.rstrip() for item in x]
+s = ""
+s = s.join(x)
+WhatINeed = s[190:257]
 i = 0
 Amino = ""
 print(WhatINeed)
@@ -37,7 +37,7 @@ while i < int(len(WhatINeed)):
 	elif AminoLoop == "AGT" or AminoLoop == "AGC":
 		Amino = Amino + 'S'
 	elif AminoLoop == "AGA" or AminoLoop == "AGG":
-		Amino = Amino = 'R'
+		Amino = Amino + 'R'
 	elif AminoLoop == "GAA" or AminoLoop == "GAG":
 		Amino = Amino + 'E'
 	elif AminoLoop == "GAT" or AminoLoop == "GAC":
@@ -49,7 +49,7 @@ while i < int(len(WhatINeed)):
 	elif AminoLoop == "CAG" or AminoLoop == "CAA":
 		Amino = Amino + "Q"
 	elif AminoLoop == "CAC" or AminoLoop == "CAT":
-		Amino = Amino = 'H'
+		Amino = Amino + 'H'
 	elif AminoLoop == "TAT" or AminoLoop == "TAC":
 		Amino = Amino + 'Y'
 	elif AminoLoop == "TGT" or AminoLoop == "TGC":
@@ -59,7 +59,8 @@ while i < int(len(WhatINeed)):
 	else:
 		Amino = Amino + '*'
 	i= i + 3
-
+	print(Amino)
+	print("\n")
 print("\n")
 print(Amino)
 f.close()
