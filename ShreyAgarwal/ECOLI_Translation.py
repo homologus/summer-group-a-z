@@ -71,9 +71,9 @@ translation = {
 
 x = 0
 
-#while(x < length):
- #       y = str[x:x + 3]
-  #      print(translation[y])
-   #     x = x + 3
+while(x < length):
+        y = str[x:x + 3]
+        print(translation[y])
+        x = x + 3
 print(DNA_Short_String)
 f.close()       
