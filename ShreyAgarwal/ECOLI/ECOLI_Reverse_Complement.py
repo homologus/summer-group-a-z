@@ -6,101 +6,42 @@ DNA = ""
 DNA = DNA.join(x)
 DNA_Short_String = DNA[189:254]
 
+
 def Reverse_Complement(seq):
-	reverse_complement = ""
-	for letter in seq:
-		if letter == "A":
-			reverse_complement += "T"
-		elif letter == "T":
-			reverse_complement += "A"
-		elif letter == "G":
-			reverse_complement  += "C"
-		else:
-			reverse_complement  += "G"
-	return(reverse_complement[::-1])
+    reverse_complement = ""
+    for letter in seq:
+        if letter == "A":
+            reverse_complement += "T"
+        elif letter == "T":
+            reverse_complement += "A"
+        elif letter == "G":
+            reverse_complement += "C"
+        else:
+            reverse_complement += "G"
+    return (reverse_complement[::-1])
 
-print(Reverse_Complement(DNA_Short_String))
 
-length = int(len(DNA))
+print("The reverse complement of the sequence is " + Reverse_Complement(DNA_Short_String) + ".")
 
-translation = {
-	"TTT": "F",
-	"TTC": "F",
-	"TTA": "L",
-	"TTG": "L",
-	"CTT": "L",
-	"CTC": "L",
-	"CTA": "L",
-	"CTG": "L",
-	"ATT": "I",
-	"ATC": "I",
-	"ATA": "I",
-	"ATG": "M",
-	"GTT": "V",
-	"GTC": "V",
-	"GTA": "V",
-	"GTG": "V",
-	"TCT": "S",
-	"TCC": "S",
-	"TCA": "S",
-	"TCG": "S",
-	"CCT": "P",
-	"CCC": "P",
-	"CCA": "P",
-	"CCG": "P",
-	"ACT": "T",
-	"ACC": "T",
-	"ACA": "T",
-	"ACG": "T",
-	"GCT": "A",
-	"GCC": "A",
-	"GCA": "A",
-	"GCG": "A",
-	"TAT": "Y",
-	"TAC": "Y",
-	"CAT": "H",
-	"CAC": "H",
-	"CAA": "Q",
-	"CAG": "Q",
-	"AAT": "N",
-	"AAC": "N",
-	"AAA": "K",
-	"AAG": "K",
-	"GAT": "D",
-	"GAC": "D",
-	"GAA": "E",
-	"GAG": "E",
-	"TGT": "C",
-	"TGC": "C",
-	"TGG": "W",
-	"CGT": "R",
-	"CGC": "R",
-	"CGA": "R",
-	"CGG": "R",
-	"AGT": "S",
-	"AGC": "S",
-	"AGA": "R",
-	"AGG": "R",
-	"GGT": "G",
-	"GGC": "G",
-	"GGA": "G",
-	"GGG": "G", 
-	"TGA": "Stop Codon",
-	"TAA": "Stop Codon",
-	"TAG": "Stop Codon",
-	"C": "Done",
-	"TG": "Done",
-	"CA": "Done"
-}
+length = int(len(DNA_Short_String))
+
+translation ={'TTT':'F', 'TTC':'F', 'TTA':'L', 'TTG':'L', 'TCT':'S', 'TCC':'S', 'TCA':'S', 'TCG':'S',
+'TAT':'Y', 'TAC':'Y', 'TAA':'STOP', 'TAG':'STOP', 'TGT':'C', 'TGC':'C', 'TGA':'STOP', 'TGG':'W',
+'CTT':'L', 'CTC':'L', 'CTA':'L', 'CTG':'L', 'CCT':'P', 'CCC':'P', 'CCA':'P', 'CCG':'P', 'CAT':'H',
+'CAC':'H', 'CAA':'Q', 'CAG':'Q', 'CGT':'R', 'CGC':'R', 'CGA':'R','CGG':'R',
+'ATT':'I','ATC':'I','ATA':'I','ATG':'M','ACT':'T','ACC':'T','ACA':'T','ACG':'T',
+'AAT':'N','AAC':'N','AAA':'K','AAG':'K','AGT':'S','AGC':'S','AGA':'R','AGG':'R',
+'GTT':'V','GTG':'V','GTA':'V','GTG':'V','GCT':'A','GCC':'A','GCA':'A','GCG':'A',
+'GAT':'D','GAC':'D','GAA':'E','GAG':'E','GGT':'G','GGC':'G','GGC':'G','GGA':'G','GGG':'G',
+'AA': ' ', 'TG': ' '};
 
 x = 0
 
 Protein_Sequence = ""
 
-while(x < length):
-        y = str(Reverse_Complement(DNA_Short_String[x:x + 3]))
-        print(translation[y], )
-        x = x + 3
+while (x < length):
+    Protein_Sequence += translation[DNA_Short_String[x:x + 3]]
+    x = x + 3
+print("The protein translation of the reverse complement is " + str(Protein_Sequence) + ".")
 
 f.close()
-
