@@ -1,4 +1,4 @@
-* from Bio.seq import Seq
+from Bio.Seq import Seq
 f = open("SARS.txt", "r")
 first_line = f.readline()
 string = f.readlines()
@@ -7,7 +7,7 @@ RNA = ""
 RNA = RNA.join(string)
 read = Seq(RNA)
 
-print(read[10:20])
+print(read[10:20].reverse_complement)
 
 f.close()
 
