@@ -2,8 +2,12 @@ from Bio.Seq import Seq
 
 fastaFile = open("SARS_fasta.fasta", "r")
 removingTheFirstLine = fastaFile.readline()
-theCompleteGenome = fastaFile.readlines()
-i = 0
+theCompleteGenomeInList = fastaFile.readlines()
+theCompleteGenomeInList = [item.rstrip() for item in theCompleteGenomeInList]
+theCompleteGenome = ""
+theCompleteGenome = theCompleteGenome.join(theCompleteGenomeInList)
+print(len(theCompleteGenome))
+i = 0 
 startOfProtein = 0
 DNAUntilStopCode = ""
 Amino = ""
@@ -19,20 +23,24 @@ WithAllThreeUnits = {
 }
 
 while i < len(theCompleteGenome):
-	if theCompleteGenome[i: i+3] == "TAA" or "TAG" or "TGA":
+	if theCompleteGenome[i: i+3] == "TAA" or theCompleteGenome[i: i+3] == "TAG" or theCompleteGenome[i: i+3] == "TGA":
 		DNAUntilStopCode = theCompleteGenome[startOfProtein: i+1]
-		x = startOfProtein
+		x = startOfProtein - 3
 		while x < i:
-	       		try:
-                		Amino += WithAllThreeUnits[DNAUntilStopCode[i:i+3]]
-        		except KeyError:
-                		Amino += WithTwoUnits[DNAUntilStopCode[i: i+2]]
-			finally:
-				x += 3
+			x += 3;
+			try:
+	               		Amino += WithAllThreeUnits[theCompleteGenome[x:x+3]]
+			except KeyError:
+				try:
+					Amino += WithTwoUnits[theCompleteGenome[x: x+2]]
+				except KeyError:
+					print(theCompleteGenome[x: x+3])
 		if len(Amino) > 100:
 			print("Start of Protein: ", startOfProtein, "End of Protein: ", i, "Protein Sequence: ", Amino)
-		startOfProtein = i+1 
-	i+=3
+		startOfProtein = i + 1
+		i+=4
+	else:
+		i+=3
 	Amino = ""
 	DNAUnitilStopCode = ""
 	TheDNAStrand = ""
