@@ -22,7 +22,7 @@ while x < len(RNA):
                         y = y + 3;
                         Protein_Seq = Protein_Seq.join(read[y:y + 3].translate())
                 if len(Protein_Seq) > 100:
-                        print("Start of Protein:", Protein_Start, "End of Protein:", i, "Protein Sequence:", Protein_Seq)
+                        print(Protein_Start, x, Protein_Seq)
                 Protein_Start = x + 1
                 x = x + 4
         else:
