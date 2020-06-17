@@ -7,7 +7,9 @@ RNA = ""
 RNA = RNA.join(string)
 read = Seq(RNA)
 
-print(read[10:20].reverse_complement)
+print(read.translate())
+print(read[1:].translate())
+print(read[2:].translate())
 
 f.close()
 
