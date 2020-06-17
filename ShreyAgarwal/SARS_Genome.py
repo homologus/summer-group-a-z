@@ -28,5 +28,3 @@ while x < len(RNA):
         else:
                 x = x + 3
         Protein_Seq = ""
-        DNAUnitilStopCode = ""
-
