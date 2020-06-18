@@ -16,7 +16,7 @@ read = Seq(RNA)
 
 while x < len(RNA):
         if RNA[x:x + 3] == "TAA" or RNA[x:x + 3] == "TAG" or RNA[x:x + 3] == "TGA":
-                Stop_Codon = RNA[Protein_Start: x + 1]
+                Stop_Codon = RNA[Protein_Start: x + 3]
                 y = Protein_Start - 3
                 while y < x:
                         y = y + 3;
@@ -27,4 +27,3 @@ while x < len(RNA):
                 x = x + 4
         else:
                 x = x + 3
-        Protein_Seq = ""
