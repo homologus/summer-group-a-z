@@ -1,0 +1,35 @@
+bat SARS proteins and gene locations 
+393-13410
+	nonstructural polyprotein
+13448-21482
+	non-structural polyprotein 1ab
+21530-25217
+	spike protein
+25283-26051
+	ORF3a
+26355-27022
+	membrane glycoprotein
+27790- 28102
+	ORF8
+28116- 29385
+	nucleocapsid protein
+
+
+SARS
+433-13480
+	ORF1a polyprotein
+13518-21552
+	ORF1ab polyprotein
+21553-25381
+	surface glycoprotein
+25446-26217
+	ORF3a
+26552-27188
+	membrane glycoprotein
+27438-27756
+	ORF7a protein
+27953-28256
+	ORF8 protein
+28270-29530
+	nucleocapsid phosphoprotein
+
