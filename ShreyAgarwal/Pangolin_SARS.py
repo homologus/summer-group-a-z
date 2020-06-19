@@ -1,6 +1,6 @@
 from Bio.Seq import Seq
 
-f = open("Bat_SARS.txt", "r")
+f = open("Pangolin_SARS.txt", "r")
 first_line = f.readline()
 string = f.readlines()
 string = [item.rstrip() for item in string]
