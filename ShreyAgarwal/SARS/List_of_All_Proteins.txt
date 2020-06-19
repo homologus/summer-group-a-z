@@ -1,0 +1,42 @@
+SARS-CoV-2 Proteins:
+
+ORF1ab Protein
+ORF3a Protein
+ORF7a Protein
+
+Pangolin SARS-CoV-2 Proteins:
+
+ORF1a Polyprotein
+orf1ab Polyprotein
+spike protein
+surface glycoprotein
+orf3a protein
+NS3 protein
+Nucleocapsid Phosphoprotein
+
+SARS-CoV(2003) Proteins:
+
+orf1a polyprotein
+putative transmembrane protein
+M protein
+Putative nucleocapsid protein N
+
+Bat-CoV-2(2019) Proteins:
+
+non-structural polyprotein 1a
+putative transmembrane protein
+ORF3b
+nucleoapsid protein
+
+California Patient SARS-CoV-2 (2019) Proteins:
+
+OFR1ab polyprotein
+OFR3a protein
+ORF7a protein
+
+Bat-CoV (2013) Proteins:
+
+non-strucutral polyprotein 1a
+putative transmembrane protein
+membrane protein RsSHC014
+putative nucleocapside protein N
