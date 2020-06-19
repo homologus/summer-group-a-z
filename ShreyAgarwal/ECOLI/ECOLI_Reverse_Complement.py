@@ -5,7 +5,7 @@ x = [genome.rstrip() for genome in x]
 DNA = ""
 DNA = DNA.join(x)
 DNA_Short_String = DNA[189:254]
-
+sequence_to_use = DNA_Short_String
 
 def Reverse_Complement(seq):
     reverse_complement = ""
@@ -21,9 +21,9 @@ def Reverse_Complement(seq):
     return (reverse_complement[::-1])
 
 
-print("The reverse complement of the sequence is " + Reverse_Complement(DNA_Short_String) + ".")
+print("The reverse complement of the sequence is " + Reverse_Complement(sequence_to_use) + ".")
 
-length = int(len(DNA_Short_String))
+length = int(len(sequence_to_use))
 
 translation ={'TTT':'F', 'TTC':'F', 'TTA':'L', 'TTG':'L', 'TCT':'S', 'TCC':'S', 'TCA':'S', 'TCG':'S',
 'TAT':'Y', 'TAC':'Y', 'TAA':'STOP', 'TAG':'STOP', 'TGT':'C', 'TGC':'C', 'TGA':'STOP', 'TGG':'W',
@@ -40,7 +40,7 @@ x = 0
 Protein_Sequence = ""
 
 while (x < length):
-    Protein_Sequence += translation[DNA_Short_String[x:x + 3]]
+    Protein_Sequence += translation[sequence_to_use[x:x + 3]]
     x = x + 3
 print("The protein translation of the reverse complement is " + str(Protein_Sequence) + ".")
 

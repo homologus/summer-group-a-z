@@ -5,6 +5,8 @@ DNA = ""
 DNA = DNA.join(string)
 DNA_Short_String = DNA[189:254]
 length = int(len(DNA))
+sequence_to_use = DNA_Short_String
+
 translation = {
 	"TTT": "F",
 	"TTC": "F",
@@ -79,8 +81,8 @@ x = 0
 Protein_Sequence = ""
 
 while(x < length):
-        y = str(DNA_Short_String[x:x + 3])
+        y = str(sequence_to_use[x:x + 3])
         print(translation[y], )
         x = x + 3
-print(DNA_Short_String)
+print(sequence_to_use)
 f.close()
