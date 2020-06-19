@@ -4,7 +4,7 @@ ORF1ab Protein
 ORF3a Protein
 ORF7a Protein
 
-Bat SARS-CoV-2 Proteins:
+Pangolin SARS-CoV-2 Proteins:
 
 ORF1a Polyprotein
 orf1ab Polyprotein
@@ -14,6 +14,6 @@ orf3a protein
 NS3 protein
 Nucleocapsid Phosphoprotein
 
-SARS-CoV(2000) Proteins:
+SARS-CoV(2013) Proteins:
 
-
+Bat-CoV-2 Proteins:
