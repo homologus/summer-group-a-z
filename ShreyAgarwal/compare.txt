@@ -1,0 +1,9 @@
+SARS-CoV-2 Proteins:
+
+ORF1ab Protein
+ORF3a Protein
+ORF7a Protein
+
+Bat SARS-CoV-2 Proteins:
+
+
