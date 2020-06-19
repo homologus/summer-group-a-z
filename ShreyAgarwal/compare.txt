@@ -6,4 +6,14 @@ ORF7a Protein
 
 Bat SARS-CoV-2 Proteins:
 
+ORF1a Polyprotein
+orf1ab Polyprotein
+spike protein
+surface glycoprotein
+orf3a protein
+NS3 protein
+Nucleocapsid Phosphoprotein
+
+SARS-CoV(2000) Proteins:
+
 
